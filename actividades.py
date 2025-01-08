@@ -8,7 +8,7 @@ import plotly.express as px
 
 ### Cargar el set de datos
 
-ruta_archivo = r'C:\Users\dmoreno\Documents\despliegue\actividades.xlsx'
+ruta_archivo = 'actividades.xlsx'
 # Cargar el archivo Excel en un DataFrame
 df = pd.read_excel(ruta_archivo)
 print(df)
