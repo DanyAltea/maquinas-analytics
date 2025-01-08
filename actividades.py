@@ -6,11 +6,12 @@ import streamlit as st
 import plotly.express as px
 
 
+
 ### Cargar el set de datos
 
-ruta_archivo = 'actividades.xlsx'
+#ruta_archivo = 'actividades.xlsx'
 # Cargar el archivo Excel en un DataFrame
-df = pd.read_excel(ruta_archivo)
+df = pd.read_excel('actividades.xlsx')
 print(df)
 
 # Convertir la columna de fechas a datetime
