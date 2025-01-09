@@ -9,13 +9,12 @@ import plotly.express as px
 
 ### Cargar el set de datos
 
-#ruta_archivo = 'actividades.xlsx'
-# Cargar el archivo Excel en un DataFrame
-df = pd.read_excel('actividades.xlsx')
+url = "https://drive.google.com/uc?export=download&id=1w41dVQb-O7tfgtl40Do8h6PMhu3Lgamt"
+df = pd.read_excel(url)
 print(df)
 
-# Convertir la columna de fechas a datetime
-df['Registrationdate'] = pd.to_datetime(df['Registrationdate'])
+# Convertir las fechas manejando el formato día/mes/año
+df['Registrationdate'] = pd.to_datetime(df['Registrationdate'], dayfirst=True, errors='coerce')
 
 # Crear un contenedor horizontal para la selección de máquina y fechas
 col1, col2, col3 = st.columns(3)
